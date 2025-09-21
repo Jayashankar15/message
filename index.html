@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discover Jharkhand - Live Tracker & Emergency</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Discover Jharkhand</h1>
+      <div class="header-actions">
+        <button id="openContacts" class="btn">Emergency Contacts</button>
+        <button id="toggleTracking" class="btn">Start Tracking</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Intro -->
+  <section class="hero container">
+    <h2>Tourism Guide & Live Location</h2>
+    <p>Explore, track your location and notify emergency contacts in one tap.</p>
+  </section>
+
+  <!-- Map + Controls -->
+  <section class="map-section container">
+    <div class="map-controls">
+      <button id="centerJh" class="btn">Center Jharkhand</button>
+      <button id="emergencyBtn" class="btn emergency">EMERGENCY</button>
+      <span id="status" class="status">Tracking: off</span>
+    </div>
+    <div id="map" aria-label="Map" role="application"></div>
+
+    <div class="info-panel">
+      <div><strong>Current coords:</strong> <span id="coords">—</span></div>
+      <div><strong>Address:</strong> <span id="address">—</span></div>
+      <div><strong>Last update:</strong> <span id="lastUpdate">—</span></div>
+    </div>
+  </section>
+
+  <!-- Contacts modal -->
+  <div id="contactsModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3>Emergency Contacts & Settings</h3>
+
+      <form id="contactsForm">
+        <label>Email to notify (comma separated):</label>
+        <input type="text" id="contactEmails" placeholder="help@example.com,friend@domain.com"/>
+
+        <label>Telegram chat IDs (comma separated):</label>
+        <input type="text" id="contactTelegram" placeholder="123456789,-1001122334455"/>
+
+        <label>Optional message (prefill for email/SMS/telegram):</label>
+        <textarea id="defaultMessage" placeholder="I need help. My location:"></textarea>
+
+        <label>
+          <input type="checkbox" id="autoSendBackend" />
+          Use backend automatic send (requires server setup)
+        </label>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn primary">Save</button>
+          <button type="button" id="closeContacts" class="btn">Close</button>
+        </div>
+      </form>
+
+      <hr/>
+      <h4>Last Emergency Log</h4>
+      <pre id="lastLog">No emergency sent yet.</pre>
+    </div>
+  </div>
+
+  <!-- Leaflet and scripts -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

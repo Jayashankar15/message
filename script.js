@@ -1,4 +1,4 @@
-// ====== UI elements ======
+// ====== UI elements ======// 
 
 const toggleTrackingBtn = document.getElementById('toggleTracking');
 

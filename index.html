@@ -1,85 +1,103 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Discover Jharkhand - Live Tracker & Emergency</title>
+    <meta charset="UTF-8">
+    <title>Virat Kohli - Profile</title>
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Internal CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f6fa;
+        }
 
-  <!-- Your CSS -->
-  <link rel="stylesheet" href="style.css" />
+        header {
+            background-color: #1e3c72;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+            max-width: 550px;
+            margin: auto;
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        button {
+            background-color: #1e3c72;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #16305d;
+        }
+    </style>
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="site-header">
+
+    <header>
+        <h1>Virat Kohli</h1>
+        <p>Indian International Cricketer</p>
+    </header>
+
     <div class="container">
-      <h1>Discover Jharkhand</h1>
-      <div class="header-actions">
-        <button id="openContacts" class="btn">Emergency Contacts</button>
-        <button id="toggleTracking" class="btn">Start Tracking</button>
-      </div>
-    </div>
-  </header>
+        <div class="card">
 
-  <!-- Hero / Intro -->
-  <section class="hero container">
-    <h2>Tourism Guide & Live Location</h2>
-    <p>Explore, track your location and notify emergency contacts in one tap.</p>
-  </section>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Virat_Kohli_in_2023.jpg" alt="Virat Kohli">
 
-  <!-- Map + Controls -->
-  <section class="map-section container">
-    <div class="map-controls">
-      <button id="centerJh" class="btn">Center Jharkhand</button>
-      <button id="emergencyBtn" class="btn emergency">EMERGENCY</button>
-      <span id="status" class="status">Tracking: off</span>
-    </div>
-    <div id="map" aria-label="Map" role="application"></div>
+            <h2>About</h2>
 
-    <div class="info-panel">
-      <div><strong>Current coords:</strong> <span id="coords">—</span></div>
-      <div><strong>Address:</strong> <span id="address">—</span></div>
-      <div><strong>Last update:</strong> <span id="lastUpdate">—</span></div>
-    </div>
-  </section>
+            <p>
+                Virat Kohli is one of the greatest batsmen in modern cricket.
+                He has captained India in all formats and holds many records.
+            </p>
 
-  <!-- Contacts modal -->
-  <div id="contactsModal" class="modal">
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <h3>Emergency Contacts & Settings</h3>
+            <p><b>Born:</b> 5 November 1988</p>
+            <p><b>Role:</b> Batsman</p>
+            <p><b>Team:</b> India / RCB</p>
 
-      <form id="contactsForm">
-        <label>Email to notify (comma separated):</label>
-        <input type="text" id="contactEmails" placeholder="help@example.com,friend@domain.com"/>
+            <button>View Stats</button>
 
-        <label>Telegram chat IDs (comma separated):</label>
-        <input type="text" id="contactTelegram" placeholder="123456789,-1001122334455"/>
-
-        <label>Optional message (prefill for email/SMS/telegram):</label>
-        <textarea id="defaultMessage" placeholder="I need help. My location:"></textarea>
-
-        <label>
-          <input type="checkbox" id="autoSendBackend" />
-          Use backend automatic send (requires server setup)
-        </label>
-
-        <div class="modal-actions">
-          <button type="submit" class="btn primary">Save</button>
-          <button type="button" id="closeContacts" class="btn">Close</button>
         </div>
-      </form>
-
-      <hr/>
-      <h4>Last Emergency Log</h4>
-      <pre id="lastLog">No emergency sent yet.</pre>
     </div>
-  </div>
 
-  <!-- Leaflet and scripts -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="script.js"></script>
+    <footer>
+        <p>© 2026 Virat Kohli Fan Page</p>
+    </footer>
+
 </body>
 </html>
+
